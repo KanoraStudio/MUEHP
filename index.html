@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -20,9 +21,7 @@
         content="#101010"
     >
 
-    <title>
-        MUE | Minecraft Unity Edition
-    </title>
+    <title>MUE | Minecraft Unity Edition</title>
 
     <link
         rel="stylesheet"
@@ -44,11 +43,12 @@
     class="site-header"
 >
 
-
     <div class="header-inner">
 
 
-        <!-- Logo -->
+        <!-- ==================================================
+             LOGO
+             ================================================== -->
 
         <a
             href="index.html"
@@ -56,14 +56,18 @@
             aria-label="MUE Home"
         >
 
-            <span class="logo-mark">
-                MUE
-            </span>
+            <img
+                src="assets/images/mue-logo.png"
+                alt="MUE"
+                class="logo-image"
+            >
 
         </a>
 
 
-        <!-- Main Navigation -->
+        <!-- ==================================================
+             DESKTOP NAVIGATION
+             ================================================== -->
 
         <nav
             class="desktop-nav"
@@ -71,41 +75,45 @@
         >
 
 
-            <!-- Editions -->
-
             <button
                 class="nav-trigger"
+                type="button"
                 data-menu="editionMenu"
                 aria-expanded="false"
+                aria-controls="editionMenu"
             >
 
                 エディション
 
-                <span>
+                <span
+                    class="nav-trigger-arrow"
+                    aria-hidden="true"
+                >
                     ↓
                 </span>
 
             </button>
 
 
-            <!-- Features -->
-
             <button
                 class="nav-trigger"
+                type="button"
                 data-menu="featureMenu"
                 aria-expanded="false"
+                aria-controls="featureMenu"
             >
 
                 機能
 
-                <span>
+                <span
+                    class="nav-trigger-arrow"
+                    aria-hidden="true"
+                >
                     ↓
                 </span>
 
             </button>
 
-
-            <!-- Compare -->
 
             <a
                 href="compare.html"
@@ -115,44 +123,51 @@
             </a>
 
 
-            <!-- Help -->
-
             <button
                 class="nav-trigger"
+                type="button"
                 data-menu="helpMenu"
                 aria-expanded="false"
+                aria-controls="helpMenu"
             >
 
                 ヘルプ
 
-                <span>
+                <span
+                    class="nav-trigger-arrow"
+                    aria-hidden="true"
+                >
                     ↓
                 </span>
 
             </button>
 
 
-            <!-- Support -->
-
             <button
                 class="nav-trigger"
+                type="button"
                 data-menu="supportMenu"
                 aria-expanded="false"
+                aria-controls="supportMenu"
             >
 
                 サポート
 
-                <span>
+                <span
+                    class="nav-trigger-arrow"
+                    aria-hidden="true"
+                >
                     ↓
                 </span>
 
             </button>
 
-
         </nav>
 
 
-        <!-- Right Actions -->
+        <!-- ==================================================
+             HEADER ACTIONS
+             ================================================== -->
 
         <div class="header-actions">
 
@@ -165,6 +180,7 @@
                 type="button"
                 aria-label="検索"
                 aria-expanded="false"
+                aria-controls="searchPanel"
             >
 
                 🔍
@@ -178,9 +194,7 @@
                 href="downloads.html"
                 class="download-link"
             >
-
                 Download
-
             </a>
 
 
@@ -192,6 +206,7 @@
                 type="button"
                 aria-label="アカウント"
                 aria-expanded="false"
+                aria-controls="accountPanel"
             >
 
                 👤
@@ -206,6 +221,7 @@
                 class="header-icon-button"
                 type="button"
                 aria-label="テーマ変更"
+                title="テーマ変更"
             >
 
                 🌙
@@ -221,6 +237,7 @@
                 type="button"
                 aria-label="メニュー"
                 aria-expanded="false"
+                aria-controls="mobileMenu"
             >
 
                 ☰
@@ -229,7 +246,6 @@
 
 
         </div>
-
 
     </div>
 
@@ -267,8 +283,9 @@
                 <input
                     id="searchInput"
                     type="search"
-                    placeholder="検索..."
+                    placeholder="Minecraft Unity Editionを検索..."
                     autocomplete="off"
+                    aria-label="サイト内検索"
                 >
 
                 <button
@@ -281,10 +298,16 @@
             </form>
 
 
+            <div
+                id="searchResults"
+                class="search-results"
+                aria-live="polite"
+            ></div>
+
+
         </div>
 
     </div>
-
 
 
     <!-- ==================================================
@@ -297,7 +320,6 @@
     >
 
         <div class="mega-panel-inner">
-
 
             <div class="panel-heading">
 
@@ -320,9 +342,7 @@
                     class="mega-card"
                 >
 
-                    <span>
-                        PC
-                    </span>
+                    <span>PC</span>
 
                     <strong>
                         Minecraft Unity Edition for PC
@@ -340,9 +360,7 @@
                     class="mega-card"
                 >
 
-                    <span>
-                        WEB
-                    </span>
+                    <span>WEB</span>
 
                     <strong>
                         Minecraft Unity Edition Web
@@ -360,9 +378,7 @@
                     class="mega-card"
                 >
 
-                    <span>
-                        MOBILE
-                    </span>
+                    <span>MOBILE</span>
 
                     <strong>
                         Minecraft Unity Edition Mobile
@@ -380,9 +396,7 @@
                     class="mega-card"
                 >
 
-                    <span>
-                        COMPARE
-                    </span>
+                    <span>COMPARE</span>
 
                     <strong>
                         エディション比較
@@ -402,7 +416,6 @@
     </div>
 
 
-
     <!-- ==================================================
          FEATURE MENU
          ================================================== -->
@@ -413,7 +426,6 @@
     >
 
         <div class="mega-panel-inner">
-
 
             <div class="panel-heading">
 
@@ -436,9 +448,7 @@
                     class="mega-card"
                 >
 
-                    <span>
-                        GAMEPLAY
-                    </span>
+                    <span>GAMEPLAY</span>
 
                     <strong>
                         ゲームプレイ
@@ -518,7 +528,6 @@
     </div>
 
 
-
     <!-- ==================================================
          HELP MENU
          ================================================== -->
@@ -529,7 +538,6 @@
     >
 
         <div class="mega-panel-inner">
-
 
             <div class="panel-heading">
 
@@ -614,7 +622,6 @@
     </div>
 
 
-
     <!-- ==================================================
          SUPPORT MENU
          ================================================== -->
@@ -625,7 +632,6 @@
     >
 
         <div class="mega-panel-inner">
-
 
             <div class="panel-heading">
 
@@ -710,7 +716,6 @@
     </div>
 
 
-
     <!-- ==================================================
          ACCOUNT PANEL
          ================================================== -->
@@ -721,7 +726,6 @@
     >
 
         <div class="mega-panel-inner">
-
 
             <div class="panel-heading">
 
@@ -806,7 +810,6 @@
     </div>
 
 
-
     <!-- ==================================================
          MOBILE MENU
          ================================================== -->
@@ -816,9 +819,8 @@
         class="mobile-menu"
     >
 
-
-        <a href="minecraft-unity-edition.html">
-            Minecraft Unity Edition
+        <a href="index.html">
+            Home
         </a>
 
         <a href="compare.html">
@@ -845,12 +847,10 @@
             Account
         </a>
 
-
     </div>
 
 
 </header>
-
 
 
 <!-- ==================================================
@@ -868,7 +868,6 @@
         class="hero"
         id="home"
     >
-
 
         <div class="hero-background">
 
@@ -919,7 +918,6 @@
                 class="hero-buttons reveal delay-3"
             >
 
-
                 <a
                     href="minecraft-unity-edition.html"
                     class="button button-large"
@@ -935,7 +933,6 @@
                     Download
                 </a>
 
-
             </div>
 
 
@@ -943,17 +940,9 @@
                 class="hero-platforms reveal delay-4"
             >
 
-                <span>
-                    PC
-                </span>
-
-                <span>
-                    Web
-                </span>
-
-                <span>
-                    Mobile
-                </span>
+                <span>PC</span>
+                <span>Web</span>
+                <span>Mobile</span>
 
             </div>
 
@@ -971,9 +960,7 @@
 
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -982,17 +969,13 @@
 
     <section class="section intro-section">
 
-
         <div class="container">
 
-
             <div class="section-heading reveal">
-
 
                 <span class="section-label">
                     MINECRAFT UNITY EDITION
                 </span>
-
 
                 <h2>
                     ひとつの世界を、
@@ -1000,26 +983,19 @@
                     どこからでも。
                 </h2>
 
-
                 <p>
-
                     Minecraft Unity Editionは、
                     PC・Web・Mobileという
                     異なるプラットフォームを
                     ひとつのゲーム体験へ
                     つなげることを目指しています。
-
                 </p>
-
 
             </div>
 
-
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -1031,17 +1007,13 @@
         id="editions"
     >
 
-
         <div class="container">
 
-
             <div class="section-heading reveal">
-
 
                 <span class="section-label">
                     EDITIONS
                 </span>
-
 
                 <h2>
                     あなたの環境で
@@ -1049,14 +1021,10 @@
                     Minecraft Unity Edition。
                 </h2>
 
-
                 <p>
-
                     プレイする環境に合わせて
                     最適なエディションを選択できます。
-
                 </p>
-
 
             </div>
 
@@ -1153,12 +1121,9 @@
 
             </div>
 
-
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -1170,23 +1135,18 @@
         id="features"
     >
 
-
         <div class="container">
 
-
             <div class="section-heading reveal">
-
 
                 <span class="section-label">
                     FEATURES
                 </span>
 
-
                 <h2>
                     Minecraft Unity Editionを
                     形作るもの。
                 </h2>
-
 
             </div>
 
@@ -1271,46 +1231,38 @@
 
             </div>
 
-
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
          DOWNLOAD
          ================================================== -->
 
-    <section class="section download-section">
-
+    <section
+        class="section download-section"
+    >
 
         <div class="container">
 
-
             <div class="download-box reveal">
 
-
                 <div>
-
 
                     <span class="section-label">
                         DOWNLOAD
                     </span>
-
 
                     <h2>
                         Minecraft Unity Editionを
                         はじめよう。
                     </h2>
 
-
                     <p>
                         PC・Web・Mobileの
                         エディションを確認できます。
                     </p>
-
 
                 </div>
 
@@ -1322,34 +1274,28 @@
                     Download
                 </a>
 
-
             </div>
-
 
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
          SUPPORT
          ================================================== -->
 
-    <section class="section support-section">
-
+    <section
+        class="section support-section"
+    >
 
         <div class="container">
 
-
             <div class="section-heading reveal">
-
 
                 <span class="section-label">
                     SUPPORT
                 </span>
-
 
                 <h2>
                     困ったときは、
@@ -1357,20 +1303,15 @@
                     サポートへ。
                 </h2>
 
-
                 <p>
-
                     Minecraft Unity Editionについての
                     質問や不具合などをサポートします。
-
                 </p>
-
 
             </div>
 
 
             <div class="support-actions reveal">
-
 
                 <a
                     href="faq.html"
@@ -1387,18 +1328,14 @@
                     Contact
                 </a>
 
-
             </div>
 
-
         </div>
-
 
     </section>
 
 
 </main>
-
 
 
 <!-- ==================================================
@@ -1407,73 +1344,64 @@
 
 <footer>
 
-
     <div class="container footer-inner">
 
 
         <div class="footer-brand">
 
-
-            <strong>
-                MUE
-            </strong>
-
+            <img
+                src="assets/images/mue-logo.png"
+                alt="MUE"
+                class="logo-image"
+            >
 
             <span>
                 Minecraft Unity Edition
             </span>
-
 
         </div>
 
 
         <div class="footer-links">
 
-
             <a href="contact.html">
                 Contact
             </a>
-
 
             <a href="faq.html">
                 FAQ
             </a>
 
+            <a href="downloads.html">
+                Download
+            </a>
 
             <a href="developer.html">
                 Developer
             </a>
 
-
             <a href="about.html">
                 About
             </a>
 
-
         </div>
-
 
     </div>
 
 
     <div class="container footer-bottom">
 
-
         <span>
             © Minecraft Unity Edition
         </span>
-
 
         <span>
             MUE
         </span>
 
-
     </div>
 
-
 </footer>
-
 
 
 <!-- ==================================================
@@ -1489,3 +1417,4 @@
 </body>
 
 </html>
+```
